@@ -1,0 +1,158 @@
+html {
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("img_girl.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron {
+      background-image: url("../images/bg.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
+.jumbotron img {
+    margin-top: 30px;
+    width: 200px;
+    border: 5px solid #eaeaea;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    width: 250px;
+    border-top: 3px solid #999;
+}
+
+section {
+    min-height: 600px;
+}
+
+.pKiri,
+.pKanan {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0);
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.portfolio {
+    background-color: #eee;
+}
+
+.portfolio .img-thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.portfolio .img-thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.contact {
+    min-height: 600px;
+}
+
+footer {
+    position: absoluter;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    background-color: #333;
+    padding-top: 40px;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 0, 9 em;
+}
+
+/* button sosmed */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #eb1616;
+  color: white;
+}
+
+
+.fa-whatsapp {
+  background: #00b489;
+  color: white;
+}
+
+.fa-github {
+  background: #171818;
+  color: white;
+}
+
+.fa-telegram {
+  background: #006eff;
+  color: white;
+}
