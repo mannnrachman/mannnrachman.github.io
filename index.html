@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -105,33 +106,25 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a href="images/portfolio/fasos.png">
+                                <a href="images/portfolio/fasos.png" data-toggle="lightbox" data-gallery="example-gallery">
                                 <img src="images/portfolio/fasos.png"  class="img-thumbnail">
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <a href="images/portfolio/fasosandroid.png">
+                                <a href="images/portfolio/fasosandroid.png" data-toggle="lightbox" data-gallery="example-gallery">
                                     <img src="images/portfolio/fasosandroid.png" width="350" height="450">
                                 </a>
                             </div>
                         </div>
-                    
-                        <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <a href="images/portfolio/sipeg.png">
+                    <a href="images/portfolio/sipeg.png" data-toggle="lightbox">
                         <img src="images/portfolio/sipeg.png" class="img-thumbnail">
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="images/portfolio/bkk.png">
+                    <a href="images/portfolio/bkk.png" data-toggle="lightbox">
                         <img src="images/portfolio/bkk.png" class="img-thumbnail">
                     </a>
                 </div>                
@@ -189,8 +182,14 @@
     <script src="js/script.js"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script>
         AOS.init();
+
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
     </script>
 </body>
 
